@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import {AiOutlineMenu} from 'react-icons/ai';
 
 const NavBar = () => {
   return (
@@ -34,7 +35,8 @@ const NavBar = () => {
               </li>
             </Link>
           </ul>
-          <div>
+          <div className="md:hidden">
+            <AiOutlineMenu />
         
           </div>
         </div>{/*end of buttons*/}
