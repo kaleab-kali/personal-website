@@ -9,21 +9,40 @@ import NavLogo from "../public/logo.png";
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState("#ecf0f3");
-  const [linkColor, setLinkColor] = useState("#C6A22B");
+  const [navBg, setNavBg] = useState("#282c33");
+  // const [linkColor, setLinkColor] = useState("#C6A22B");
+  const [linkColor, setLinkColor] = useState("#dae640");
 
   const handleNav = () => {
     setNav(!nav);
   };
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
 
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]">
+    <div
+      style={{backgroundColor: `${navBg}`}}
+      className={
+        shadow
+          ? "fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300"
+          : "fixed w-full h-20 z-[100]"
+      }
+    >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Image
-          src="/../public/assets/logo.png"
+          src={NavLogo}
           alt="/"
           width="125"
           height="50"
+          className="cursor-pointer"
         />
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
@@ -46,7 +65,7 @@ const NavBar = () => {
               <Link href="/#contact">Contact</Link>
             </li>
           </ul>
-           {/* Hamburger Icon */}
+          {/* Hamburger Icon */}
           <div
             style={{ color: `${linkColor}` }}
             onClick={handleNav}
@@ -169,8 +188,6 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-
-
     </div>
   );
 };
