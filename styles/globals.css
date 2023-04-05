@@ -5,6 +5,7 @@
 @layer base {
   body {
     @apply bg-[#23272e] text-[#cfd2db] tracking-wide
+    /* @apply bg-[#cac835] text-[#cfd2db] tracking-wide */
 
   }
   h1,h2,h3,h4,h5,h6 {
@@ -22,4 +23,5 @@
   button {
     @apply shadow-xl shadow-gray-500 rounded-xl uppercase bg-gradient-to-r from-[#5153bd] to-[#963a99] text-white
   }
+  
 }
