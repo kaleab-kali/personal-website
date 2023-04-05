@@ -1,5 +1,6 @@
 import NavBar from '../components/NavBar.jsx';
 import Main from '../components/Main.jsx';
+import About from '../components/About.jsx';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
      <NavBar />
      <Main />
+     <About />
      
      
     
