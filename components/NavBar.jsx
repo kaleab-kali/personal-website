@@ -114,37 +114,37 @@ const NavBar = () => {
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
               <Link href="/">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <li onClick={() => setNav(false)} className="py-2 text-sm sm:py-4">
                   Home
                 </li>
               </Link>
               <Link href="/#about">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <li onClick={() => setNav(false)} className="py-2 text-sm sm:py-4">
                   About
                 </li>
               </Link>
               <Link href="/#skills">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <li onClick={() => setNav(false)} className="py-2 text-sm sm:py-4">
                   Skills
                 </li>
               </Link>
               <Link href="/#projects">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <li onClick={() => setNav(false)} className="py-2 text-sm sm:py-4">
                   Projects
                 </li>
               </Link>
               <Link href="/resume">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <li onClick={() => setNav(false)} className="py-2 text-sm sm:py-4">
                   Resume
                 </li>
               </Link>
               <Link href="/#contact">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <li onClick={() => setNav(false)} className="py-2 text-sm sm:py-4">
                   Contact
                 </li>
               </Link>
             </ul>
-            <div className="pt-40">
+            <div className="pt-30 sm:pt-40">
               <p className="uppercase tracking-widest text-[#5651e5]">
                 Let&#39;s Connect
               </p>
